@@ -19,5 +19,8 @@ class EmployeesAdmin(admin.ModelAdmin):
 class EmployeesAdmin(admin.ModelAdmin):
     list_display = ['name']
 
+    def __str__(self):
+        return self.name
+
 
 

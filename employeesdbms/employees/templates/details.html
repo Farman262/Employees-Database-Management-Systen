@@ -5,8 +5,82 @@
 
 </div>
 
-<h4>{{ employee.first_name}}</h4>
+<div class="container">
+    <table class="container striped">
+        <tr>
+            <td>
+                <strong>Full Name:</strong>
+            </td>
+            <td>
+                {{employee.first_name}} {{employee.last_name}}
+            </td>
 
+        </tr>
+        <tr>
+            <td>
+                <strong>Email Address:</strong>
+            </td>
+            <td>
+                {{employee.email_id}}
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <strong>Phone Number:</strong>
+            </td>
+            <td>
+                {{employee.phone_number}}
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <strong>Gender:</strong>
+            </td>
+            <td>
+                {{employee.gender}}
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <strong>Employee Address:</strong>
+            </td>
+            <td>
+                {{employee.address}}
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <strong>Employee Job:</strong>
+            </td>
+            <td>
+                {% for job in employee.emp_job.all %} {{job.name}} {% endfor %}
+
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <strong>Employee Date Of Birth:</strong>
+            </td>
+            <td>
+                {{employee.date_of_birth}}
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+</div>
+
+<div class="container center-left">
+    <a style="margin-left: 145px; margin-top:30px;" href="/home" class="btn">Back</a>
+</div>
 
 
 

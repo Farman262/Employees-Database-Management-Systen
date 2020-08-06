@@ -1,10 +1,42 @@
 {% extends 'layout.html' %} {% block content %}
 <div class="container center-align">
-    <h4>Employees Database Management System</h4>
+    <h4>Employees Details</h4>
+    <a style=" margin-top:30px;" href="/admin" class="container center-align"><b><i> Admin Panel</i></b></a>
 
 </div>
 <div class="container center-align">
-    <table border="1">
+    <table class="striped">
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                First Name
+            </th>
+            <th>
+                Last Name
+            </th>
+            <th>
+                Email Address
+            </th>
+            <th>
+                Phone Number
+            </th>
+            <th>
+                Gender
+            </th>
+            <th>
+                Employee Job
+            </th>
+            <th>
+                Date Of Birth
+            </th>
+            <th>
+                Details
+            </th>
+
+
+        </tr>
 
         {% for employee in employee_details %}
         <tr>
@@ -37,7 +69,8 @@
                 {{employee.date_of_birth}}
             </td>
             <td>
-                <a href="{% url 'details' employee.id %}">Details</a>
+                <!-- <a href="{% url 'details' employee.id %}">Details</a> -->
+                <a class="waves-effect waves-light btn-small" href="details/{{employee.id}}">Details</a>
             </td>
 
         </tr>
