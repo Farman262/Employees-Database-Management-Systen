@@ -1,0 +1,2 @@
+env name: employeesdbmssite
+pip upgrade:python.exe -m pip install --upgrade pip
