@@ -3,6 +3,46 @@
     <h4>Employees Database Management System</h4>
 
 </div>
+<div class="container center-align">
+    <table border="1">
+
+        {% for employee in employee_details %}
+        <tr>
+
+            <td>
+                {{employee.id}}
+            </td>
+            <td>
+                {{employee.first_name}}
+            </td>
+            <td>
+                {{employee.last_name}}
+            </td>
+            <td>
+                {{employee.email_id}}
+            </td>
+            <td>
+                {{employee.phone_number}}
+            </td>
+            <td>
+                {{employee.gender}}
+            </td>
+            <td>
+
+                {% for job in employee.emp_job.all %} {{job.name}} {% endfor %}
+
+
+            </td>
+            <td>
+                {{employee.date_of_birth}}
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+</div>
 
 
 

@@ -7,7 +7,7 @@ def home(request):
     #return HttpResponse('This function will render Home Page')
     employees_details = Employees.objects.all()
     context = {
-        'employee_details':employee_details
+        'employee_details':employees_details
     }
     return render(request, 'home.html', context)
 
@@ -15,7 +15,7 @@ def details(request, id):
     #return HttpResponse('This page will show the Details based on ID {}'.format(id))
     employee_id = Employees.objects.get(id=id)
     context_id = {
-        'id':context_id
+        'id':employee_id
     }
 
     return render(request, 'details.html', context_id)

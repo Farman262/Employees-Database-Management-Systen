@@ -16,7 +16,15 @@ class Employees(models.Model):
     address = models.TextField()
     emp_job = models.ManyToManyField("AvailableJobs",blank=True)
     date_of_birth = models.DateField()
+    
+    class Meta:   
+        verbose_name_plural = 'Employees'
+
+    def __str__(self):
+        return self.first_name
 
 class AvailableJobs(models.Model):
     name = models.CharField(max_length=100)
+    def __str__(self):
+        return self.name
 
