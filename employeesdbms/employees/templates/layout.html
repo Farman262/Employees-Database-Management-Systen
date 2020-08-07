@@ -14,19 +14,33 @@
 
 <body>
 
-    <header class="container center-align">
+    <header>
 
-        <h4>Employees Database Management System</h4>
+        <nav>
+            <div class="nav-wrapper teal">
+                <a href="#" class="brand-logo left">EDBMS</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Employees Details</a></li>
+                    <li><a href="/admin">Admin</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
+    <header class="nav-wrapper center-align">
+
+        <h5>Employees Database Management System</h5>
 
     </header>
-    <hr> {% block content %} {% endblock %}
 
-
+    {% block content %} {% endblock %}
 
     <hr>
     <footer>
-        <p class="center-align">Create by Farman Ullah <span>@2020</span></p>
+        <div>
+            <p class="center-align">Create by Farman Ullah copyright@2020</p>
+        </div>
     </footer>
 </body>
 
